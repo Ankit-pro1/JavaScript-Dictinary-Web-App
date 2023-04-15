@@ -95,6 +95,7 @@ ul li:last-child{
 }
 ul li:last-child span{
     border-bottom: 2px solid rgb(214, 214, 214);
+    cursor: pointer;
 }
 ul .word p{
     font-size: 22px;
