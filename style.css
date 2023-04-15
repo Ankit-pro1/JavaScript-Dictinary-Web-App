@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins','sans-serif';
+}
+body{
+    min-height: 200vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 132, 198);
+}
+.wrapper{
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 350px;
+    overflow: auto;
+}
+.wrapper .header{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.wrapper .search{
+    margin-bottom: 20px;
+    position:relative;
+}
+.wrapper .search input{
+    outline: none;
+    border: 1px solid black;
+    border-radius: 6px;
+    height: 40px;
+    width: 100%;
+    padding:10px 34px;
+}
+.search input:focus{
+    border: 2px solid rgb(0, 132, 198);
+    padding: 9px 33px;
+}
+.wrapper .search :where(i,span){
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.wrapper .search i{
+    left: 10px;
+    cursor: pointer;
+}
+.search input:focus~i{
+    color: rgb(0, 132, 198);
+}
+.wrapper .search span{
+    right: 10px;
+    cursor: pointer;
+    display: none;
+}
+.wrapper .search input:valid~span{
+    display: block;
+}
+.text-info{
+    font-size: 12px;
+    color: rgb(121, 121, 121);
+}
+.wrapper.active .text-info{
+    display: none;
+}
+ul{
+    display: none;
+   
+    transition: all ease 0.5s;
+}
+.wrapper.active ul{
+   display: block;
+}
+
+ul li{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    padding-left: 4px;
+    border-bottom: 1px solid rgb(214, 214, 214);
+}
+ul li:last-child{
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+ul li:last-child span{
+    border-bottom: 2px solid rgb(214, 214, 214);
+}
+ul .word p{
+    font-size: 22px;
+    font-weight: 500;
+}
+ul .word span{
+    font-size: 14px;
+    color: rgb(121, 121, 121);
+}
+ul .word i{
+    cursor: pointer;
+}
+ul .content{
+    max-height:200px;
+    overflow-y: auto;
+}
+ul .content::-webkit-scrollbar{
+    width: 0;
+}
+ul .content li .details{
+    border-left: 2px solid rgb(0, 132, 198);
+    border-radius: 4px;
+    padding-left: 10px;
+}
+ul .content li .details p{
+    font-size: 14px;
+    font-weight: 500;
+}
+ul .content li .details span{
+    font-size: 12px;
+    color: rgb(121, 121, 121);
+}
+
